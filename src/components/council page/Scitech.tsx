@@ -53,250 +53,115 @@ const clubs: club[] = [
     name: "glitch",
     desc: "The esports and game dev club of IITH.",
   },
+  {
+    name: "mobius",
+    desc: "Möbius is the Mathematics club of IIT Hyderabad.",
+  },
+  {
+    name: "qet",
+    desc: "QET is the Quantum Technologies club of IIT Hyderabad.",
+  },
+  {
+    name: "blockspace",
+    desc: "Blockspace is the Web3, Blockchain and Crypto club of IIT Hyderabad, dedicated to making blockchain and cryptocurrency understandable for everyone. From DeFi to DAOs, we explore the decentralized world together — no background required.",
+  },
+  {
+    name: "alpha",
+    desc: "ALPHA is the Quant club of IIT Hyderabad, focused on the mathematical and computational side of quantitative finance — probability, statistics, stochastic processes, optimization, algorithmic trading and machine learning — with hands-on projects, competitions and research discussions.",
+  },
 ];
 
 const clubLogos = {
-  aero: "/public/images/councils/aero.png",
+  aero: "/images/councils/aero.png",
   cepheid: "https://scitech-iith.netlify.app/images/cepheid.jpg",
   elektronica: "https://scitech-iith.netlify.app/images/elektronica.png",
   kludge: "https://scitech-iith.netlify.app/images/kludge.jpeg",
   infero: "https://scitech-iith.netlify.app/images/infero_logo.png",
-  lambda: "/public/images/councils/lambda.png",
+  lambda: "/images/councils/lambda.png",
   //prakriti: "https://scitech-iith.netlify.app/images/prakriti_logo.png",
   robotix: "https://scitech-iith.netlify.app/images/robotix_logo.png",
   torque: "https://scitech-iith.netlify.app/images/torque_logo.png",
-  glitch: "/public/images/councils/glitch.png",
-  epoch: "/public/images/councils/epoch.png",
+  glitch: "/images/councils/glitch.png",
+  epoch: "/images/councils/epoch.png",
+  mobius: "/images/councils/mobius.jpg",
+  qet: "/images/councils/qet.jpg",
+  blockspace: "/images/councils/blockspace.png",
+  alpha: "/images/councils/alpha.png",
 };
 
-const coords = {
-  cepheid: [
-    {
-      name: "Vedant Mokal",
-      roll: "EP23BTECH11034",
-      position: "Overall Head",
-    },
-    {
-      name: "Sri Devaki Meduri",
-      roll: "EP23BTECH11030",
-      position: "Astro-Tech Domain Head",
-    },
-    {
-      name: "Arav P",
-      roll: "EP23BTECH11003",
-      position: "Telescope-ops Domain Head",
-    },
-    {
-      name: "Arpit Suryavanshi",
-      roll: "EP24BTECH11005",
-      position: "Astroimagery Domain Head",
-    },
-  ],
+// 2026-27 club heads (from the Gymkhana teams list, 23 Nov 2026).
+// TODO: Elektronica heads not announced — John Bobby and Harsha are the contacts on its May 2026 recruitment mail.
+// TODO: confirm Kludge heads (signed as contacts on its 2026-27 recruitment mails, not announced as heads).
+// TODO: Blockspace — Annant Pathak & Tejaswi sign its 2026-27 mails as contacts (not announced as heads); emails not found.
+// TODO: Alpha (new Quant club, announced 15 Sep 2026) — no heads named yet.
+// TODO: Prakriti heads not found.
+type Member = { name: string; email?: string; mobile?: string; position: string };
+const coords: Record<string, Member[]> = {
   aero: [
-    {
-      name: "Ameen Aazam",
-      roll: "EE23BTECH11006",
-      position: "Overall Head",
-    },
-    {
-      name: "Pranav Anil Ingle",
-      roll: "ME23BTECH11048",
-      position: "Overall Head",
-    },
-    {
-      name: "Naren Karthik T",
-      roll: "IC24BTECH11017",
-      position: "Overall Head",
-    },
+    { name: "Manish Garinapally", mobile: "+91 8374309975", position: "Overall Head" },
+    { name: "Adithya Preetham", mobile: "+91 7022010269", position: "Technical Head" },
+    { name: "Naren Karthik T", email: "ic24btech11017@iith.ac.in", mobile: "+91 7200023407", position: "Technical Head" },
   ],
-  infero: [
-    {
-      name: "Muppidi Sai Rajeshwara Siddarth Reddy",
-      roll: "MA23BTECH11017",
-      position: "Overall Head",
-    },
-    {
-      name: "Chaitanya Nemmani",
-      roll: "MA23BTECH11008",
-      position: "Overall Head",
-    },
-  ],
-  lambda: [
-    {
-      name: "Ankush Singh",
-      roll: "MA23BTECH11002",
-      position: "Overall Head",
-    },
-    {
-      name: "Velvadapu Naga Venkata Ganeswar",
-      roll: "MS23BTECH11034",
-      position: "Overall Head",
-    },
-    {
-      name: "Pranjal Jayesh Prajapati",
-      roll: "CS23BTECH11048",
-      position: "Overall Head",
-    },
-    {
-      name: "Abdul Muqeeth",
-      roll: "ES23BTECH11028",
-      position: "Tech Lead",
-    },
+  cepheid: [
+    { name: "Sameer Choudhary", mobile: "+91 6005206550", position: "Overall Head" },
+    { name: "Jyothish J", email: "me24btech11029@iith.ac.in", mobile: "+91 7012228022", position: "Technical Head" },
+    { name: "Guntha Sai Vedanth", mobile: "+91 9440488691", position: "Community Head" },
   ],
   elektronica: [
-    {
-      name: "Dhanush",
-      roll: "EE23BTECH11015",
-      position: "Overall Head",
-    },
-    {
-      name: "Prajwal",
-      roll: "EE23BTECH11217",
-      position: "Overall Head",
-    },
-    {
-      name: "Venkatesh",
-      roll: "EE23BTECH11010",
-      position: "Domain Head",
-    },
-    {
-      name: "Arohish",
-      roll: "EE23BTECH11009",
-      position: "Domain Head",
-    },
-    {
-      name: "Vedamsh",
-      roll: "BM23BTECH11015",
-      position: "Domain Head",
-    },
-  ],
-  robotix: [
-    {
-      name: "Aditya Gupta",
-      roll: "ME23BTECH11004",
-      position: "Overall Head",
-    },
-    {
-      name: "Abhijit Kashyap",
-      roll: "BM23BTECH11002",
-      position: "Overall Head",
-    },
-    {
-      name: "Pardhu",
-      roll: "ME23BTECH11013",
-      position: "Overall Head",
-    },
-    {
-      name: "Aryan Gandhi",
-      roll: "ME23BTECH11010",
-      position: "Overall Head",
-    },
-    {
-      name: "Soumyajit Maji",
-      roll: "ME23BTECH11059",
-      position: "Overall Head",
-    },
-    {
-      name: "Ethan Bobby Kurien",
-      roll: "CE23BTECH11019",
-      position: "Overall Head",
-    },
-  ],
-  torque: [
-    {
-      name: "Raghav",
-      roll: "EP23BTECH11020",
-      position: "Overall Head",
-    },
-    {
-      name: "Avinash",
-      roll: "ME23BTECH11022",
-      position: "Technical Head",
-    },
-    {
-      name: "Asik",
-      roll: "SM24MTECH14004",
-      position: "Technical Head",
-    },
-  ],
-  epoch: [
-    {
-      name: "Ashwath E",
-      roll: "AI23BTECH11001",
-      position: "Overall Head",
-    },
-    {
-      name: "Harsh Singh",
-      roll: "EP23BTECH11012",
-      position: "Overall Head",
-    },
-    {
-      name: "Ankita Sri S P",
-      roll: "MA23BTECH11001",
-      position: "Tech Lead- Computer Vision",
-    },
-    {
-      name: "Nitesh Gokul",
-      roll: "AI23BTECH11006",
-      position: "Tech Lead- Reinforcement Learning",
-    },
-  ],
-  glitch: [
-    {
-      name: "Suchit",
-      roll: "AI23BTECH11027",
-      position: "Overall Head",
-    },
-    {
-      name: "Sashim",
-      roll: "EP23BTECH11026",
-      position: "Overall Head",
-    },
-    {
-      name: "Krishna Teja",
-      roll: "CS23BTECH11028",
-      position: "Overall Head",
-    },
+    { name: "John Bobby", email: "ee24btech11032@iith.ac.in", mobile: "+91 8281962639", position: "Contact" },
+    { name: "Harsha", mobile: "+91 8142389645", position: "Contact" },
   ],
   kludge: [
-    {
-      name: "Duppalapudi Kamal Koushik",
-      roll: "CH23BTECH11016",
-      position: "Overall Head",
-    },
-    {
-      name: "Harshil",
-      roll: "ES23BTECH11016",
-      position: "Overall Head",
-    },
-    {
-      name: "Sathwik Kodamarthi",
-      roll: "CS23BTECH11025",
-      position: "Overall Head",
-    },
+    { name: "Aditya Tripathy", mobile: "+91 9599891710", position: "Head" },
+    { name: "Vivaswan Rai", mobile: "+91 8052880844", position: "Head" },
+    { name: "Rayan Halder", mobile: "+91 9836025700", position: "Head" },
   ],
-  // prakriti: [
-  //   {
-  //     name: "Yapamanu Ujwal Sai Simha",
-  //     roll: "ME20BTECH11056",
-  //     position: "Overall Head",
-  //   },
-  //   {
-  //     name: "Pindi Visishta",
-  //     roll: "CE21BTECH11032",
-  //     position: "Events Head",
-  //   },
-  //   {
-  //     name: "Katherapaka Nikhil",
-  //     roll: "EE22BTECH11028",
-  //     position: "Projects Head",
-  //   },
-  //   {
-  //     name: "Vighnesh Sreepathi",
-  //     roll: "IC21BTECH11009",
-  //     position: "Media and PR Head",
-  //   },
-  //],
+  infero: [
+    { name: "Praneeth Kodavati", email: "cs24btech11034@iith.ac.in", mobile: "+91 8828994589", position: "Head" },
+    { name: "Nimish Agarwal", email: "cs24btech11044@iith.ac.in", mobile: "+91 7645031566", position: "Head" },
+  ],
+  lambda: [
+    { name: "Guddeti Sreeteja", email: "co24btech11009@iith.ac.in", position: "Head" },
+    { name: "Aric Maji", email: "cs24btech11007@iith.ac.in", position: "Head" },
+    { name: "Ganeswar Velvapudu", email: "ms23btech11034@iith.ac.in", position: "Mentor" },
+    { name: "Pranjal Prajapati", email: "cs23btech11048@iith.ac.in", position: "Mentor" },
+    { name: "Ankush Singh", email: "ma23btech11002@iith.ac.in", position: "Mentor" },
+    { name: "Abdul Muqeeth", email: "es23btech11028@iith.ac.in", position: "Mentor" },
+  ],
+  epoch: [
+    { name: "Adithi Yellai", email: "es24btech11005@iith.ac.in", mobile: "+91 7337454037", position: "Overall Head" },
+    { name: "Devansh Tripathi", email: "cs24btech11022@iith.ac.in", mobile: "+91 8123589578", position: "Overall Head" },
+    { name: "Harshvardhan Patidar", email: "ai24btech11015@iith.ac.in", mobile: "+91 9351260076", position: "Overall Head" },
+  ],
+  robotix: [
+    { name: "Siddhanth Yellanki", email: "ee24btech11059@iith.ac.in", position: "Overall Head" },
+    { name: "Bharath S Hegde", email: "me24btech11010@iith.ac.in", position: "Overall Head" },
+    { name: "Nithin Surya S", email: "ep24btech11018@iith.ac.in", position: "Overall Head" },
+  ],
+  torque: [
+    { name: "Dhanush", email: "torque@iith.ac.in", position: "Overall Head" },
+    { name: "Vishnu", email: "torque@iith.ac.in", position: "Overall Head" },
+  ],
+  glitch: [
+    { name: "Vijay S. Badde", mobile: "+91 7036017739", position: "Overall Coordinator" },
+    { name: "Devadath Sabarish", mobile: "+91 6364814117", position: "Game Dev Head" },
+    { name: "Dhwanith M. Doddahundi", mobile: "+91 7619372999", position: "eSports Head" },
+  ],
+  mobius: [
+    { name: "Harshit Hirpara", mobile: "+91 8320282691", position: "Overall Head" },
+    { name: "Balaji B", mobile: "+91 9182338579", position: "Overall Head" },
+    { name: "Krish Agarwal", mobile: "+91 9676731537", position: "Overall Head" },
+  ],
+  qet: [
+    { name: "Samyak", mobile: "+91 9315093035", position: "Head & Mentor" },
+    { name: "Jaideep", mobile: "+91 7022835787", position: "Head & Mentor" },
+  ],
+  blockspace: [
+    { name: "Annant Pathak", mobile: "+91 6261162593", position: "Contact" },
+    { name: "Tejaswi", mobile: "+91 8247274135", position: "Contact" },
+    { name: "Blockspace", email: "blockspace@gymkhana.iith.ac.in", position: "Club email" },
+  ],
+  alpha: [],
 };
 
 function Scitech() {
@@ -312,21 +177,21 @@ function Scitech() {
     <div className="my-8">
       <div>
         <h2 className="lg:text-4xl text-3xl font-bold text-center lg:text-left">
-          Science and Technology Secretary
+          Technical Affairs Secretary
         </h2>
         <div className="flex flex-col lg:flex-row gap-4 justify-center items-center mt-5 lg:justify-start">
           <div className="bg-[#2F2F2F] text-p px-4 py-6 lg:py-6 lg:px-8 mt-1 rounded-xl lg:rounded-2xl">
-            <h4 className=" text-p">Science and Technology Secretary </h4>
-            <h3 className="lg:text-2xl text-xl font-semibold">Donavalli Sai Durga Rishi</h3>
+            <h4 className=" text-p">Technical Affairs Secretary </h4>
+            <h3 className="lg:text-2xl text-xl font-semibold">Akaanksh M Adarsh</h3>
             <address className="pt-3">
               <h4 className="lg:text-xl text-lg font-semibold">
-                +91 8979797828
+                +91 8073170153
               </h4>
               <a
-                href="mailto:scitech_secy@gymkhana.iith.ac.in"
+                href="mailto:tech.affairs.secretary@gymkhana.iith.ac.in"
                 className=" lg:text-xl text-[1rem]"
               >
-                scitech_secy@gymkhana.iith.ac.in
+                tech.affairs.secretary@gymkhana.iith.ac.in
               </a>
             </address>
           </div>
@@ -403,15 +268,6 @@ function Scitech() {
               Epoch
             </li>
             <li
-              className={`px-4 py-2 rounded-md ${club === "prakriti" ? "bg-[#B74224]" : "text-opacity-40"
-                }`}
-              onClick={() => {
-                setClub("prakriti");
-              }}
-            >
-              Prakriti
-            </li>
-            <li
               className={`px-4 py-2 rounded-md ${club === "robotix" ? "bg-[#B74224]" : "text-opacity-40"
                 }`}
               onClick={() => {
@@ -438,6 +294,42 @@ function Scitech() {
             >
               Glitch
             </li>
+            <li
+              className={`px-4 py-2 rounded-md ${club === "mobius" ? "bg-[#B74224]" : "text-opacity-40"
+                }`}
+              onClick={() => {
+                setClub("mobius");
+              }}
+            >
+              Möbius
+            </li>
+            <li
+              className={`px-4 py-2 rounded-md ${club === "qet" ? "bg-[#B74224]" : "text-opacity-40"
+                }`}
+              onClick={() => {
+                setClub("qet");
+              }}
+            >
+              QET
+            </li>
+            <li
+              className={`px-4 py-2 rounded-md ${club === "blockspace" ? "bg-[#B74224]" : "text-opacity-40"
+                }`}
+              onClick={() => {
+                setClub("blockspace");
+              }}
+            >
+              Blockspace
+            </li>
+            <li
+              className={`px-4 py-2 rounded-md ${club === "alpha" ? "bg-[#B74224]" : "text-opacity-40"
+                }`}
+              onClick={() => {
+                setClub("alpha");
+              }}
+            >
+              Alpha
+            </li>
           </ul>
           <div className="lg:col-span-4 col-span-6 grid grid-cols-6 gap-6 lg:gap-[2rem] items-center relative">
             <div className="lg:col-span-4 lg:text-[18px] col-span-full lg:row-span-full m-8">
@@ -447,9 +339,10 @@ function Scitech() {
                   return (
                     <TCard
                       name={coord.name}
-                      mobile={""}
+                      key={coord.name + coord.position}
+                      mobile={coord.mobile ?? ""}
                       position={coord.position}
-                      email={coord.roll.toLowerCase() + "@iith.ac.in"}
+                      email={coord.email ?? ""}
                       activePosition="Coordinator"
                     />
                   );

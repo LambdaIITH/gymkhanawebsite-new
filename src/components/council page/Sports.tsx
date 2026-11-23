@@ -1,27 +1,29 @@
 import React from "react";
 import TCard from "./teamCard";
 
+// 2026-27 sport coordinators. Columns: name, roll no, email, phone, position.
+// TODO: coordinators were announced by first name only — get full names and emails.
+//       ("Subasis" = Subhasis Basa: same phone as the Infocus head in the 2026-27 cultural heads announcement.)
+// TODO: Squash and Weightlifting coordinators not announced.
 const teams = {
   "Team": [
-    ["Anjali Uikey", "BD23BDES11002", "bd23bdes11002@iith.ac.in", "9406815374", "Basketball Coordinator"],
-    ["Siddharth Pamidi", "EP23BTECH11029", "ep23btech11029@iith.ac.in", "9901655155", "Aquatics Coordinator"],
-    ["Nisha", "CH24BTECH11025", "CH24BTECH11025@IITH.AC.IN", "9741373921", "Athletics coordinator"],
-    ["Sai chandan", "MS24BTECH11021", "ms24btech11021@iith.ac.in", "9490392256", "Athletics coordinator"],
-    ["Atharv Kochar", "ce24btech11010", "ce24btech11010@iith.ac.in", "6394987574", "Badminton Coordinator"],
-    ["Mathew M Philip", "ee22btech11211", "ee22btech11211@iith.ac.in", "8089040111", "Basketball Coordinator"],
-    ["Shiva Chethan Halamane", "cs24btech11057", "cs24btech11057@iith.ac.in", "9482156304", "Chess coordinator"],
-    ["Jhori Ayush Prakash Satish", "ch23btech11022", "ch23btech11022@iith.ac.in", "8421743800", "Football coordinator"],
-    ["Hanokk", "Co23btech11025", "co23btech11025@iith.ac.in", "8885211202", "Gym coordinator"],
-    ["Jayanth", "Co23btech11005", "Co23btech11005@iith.ac.in", "", "Activities Coordinator"],
-    ["Mohammad Shees", "ME22BTECH11035", "me22btech11035@iith.ac.in", "7081770180", "Gym coordinator"],
-    ["KURRE VINAY", "ee23btech11036", "ee23btech11036@iith.ac.in", "9392418084", "Hockey Coordinator"],
-    ["Mohammed Fawwaz Ali", "me23btech11038", "me23btech11038@iith.ac.in", "8328206136", "Squash coordinator"],
-    ["Shounak Kamutala", "EP23BTECH11027", "ep23btech11027@iith.ac.in", "8624003213", "Table Tennis coordinator"],
-    ["Mannepalli Namitha", "MA24BTECH11015", "ma24btech11015@iith.ac.in", "7013875348", "Volley ball coordinator"],
-    ["Taimur Karim", "IC23BTECH11023", "ic23btech11023@iith.ac.in", "7001875191", "Weightlifting coordinator"],
-    ["Vivaswan Rai", "", "", "", "Tennis Coordinator"],
-    ["Sudhanshu", "", "", "", "Cricket Coordinator"],
-    ["Sai Dhanush", "", "", "", "Volley ball coordinator"],
+    ["Bharadwaj", "", "", "9346279511", "Athletics Coordinator"],
+    ["Stalin", "", "", "9550060338", "Cricket Coordinator"],
+    ["Mehul", "", "", "9943530486", "Football Coordinator"],
+    ["Pritam", "", "", "8766590645", "Hockey Coordinator"],
+    ["Tejas", "", "", "7558611359", "Tennis Coordinator"],
+    ["Divyansh", "", "", "6283868657", "Table Tennis Coordinator"],
+    ["Azaahan", "", "", "8637007433", "Badminton Coordinator"],
+    ["Prasad", "", "", "8080987024", "Volleyball Coordinator"],
+    ["Subhasis Basa", "", "ic24btech11022@iith.ac.in", "7978217289", "Basketball Coordinator"],
+    ["Artangan", "", "", "7219021212", "Aquatics Coordinator"],
+    ["Pooshan", "", "", "6290761740", "Chess Coordinator"],
+    ["Jaswant", "", "", "9398345652", "Gym Coordinator"],
+    ["Parth", "", "", "9270592970", "Indoor (Carrom/Snooker/Pool) Coordinator"],
+    ["Humendro", "", "", "7477417164", "MMA / Boxing Coordinator"],
+    ["Sasa", "", "", "8714048597", "Calisthenics Coordinator"],
+    ["Faheem", "", "", "9745349088", "Ultimate Frisbee Coordinator"],
+    ["Dhruv", "", "", "7588494786", "Skating Coordinator"],
   ]
 };
 
@@ -36,11 +38,11 @@ function Sports() {
           <div className="bg-[#2f2f2f] text-p px-4 py-6 lg:py-6 lg:px-8 mt-1 rounded-xl lg:rounded-2xl">
             <h4 className=" text-p">Sports Secretary </h4>
             <h3 className="lg:text-2xl text-xl font-semibold ">
-              Kowsith Gurubilli
+              Shashank Javaji
             </h3>
             <address className="pt-3">
               <h4 className="lg:text-xl text-lg font-semibold">
-                +91 8121181256
+                +91 9347974643
               </h4>
               <a
                 href="mailto:sports_secy@gymkhana.iith.ac.in"
