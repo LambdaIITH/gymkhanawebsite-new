@@ -8,6 +8,7 @@ export interface Props {
 }
 
 const { title, desc, imgUrl }: Props = Astro.props;
+const headingTitle = title === "Scitech" ? "Technical Affairs" : title;
 ---
 
 <Layout title="Councils">
@@ -42,7 +43,7 @@ const { title, desc, imgUrl }: Props = Astro.props;
           data-council="scitech"
           class={`council-button ${
             title === "Scitech" ? "bg-[#B74224] text-white" : "bg-white"
-          } text-lg  py-2 px-10 rounded-xl font-bold `}>Sci-Tech Council</button
+          } text-lg  py-2 px-10 rounded-xl font-bold `}>Technical Affairs Council</button
         >
       </a>
       <a href="/councils/media"
@@ -79,7 +80,7 @@ const { title, desc, imgUrl }: Props = Astro.props;
       <option value="general">General Council</option>
       <option value="cultural">Cultural Council</option>
       <option value="media">Media Council</option>
-      <option value="scitech">Sci-Tech Council</option>
+      <option value="scitech">Technical Affairs Council</option>
       <option value="sports">Sports Council</option>
       <option value="mess">Mess Council</option>
     </select>
@@ -87,7 +88,7 @@ const { title, desc, imgUrl }: Props = Astro.props;
   <section class="text-white lg:mx-40 m-20">
     <div class="flex items-center justify-between">
       <h2 class="lg:text-4xl md:text-3xl text-2xl font-semibold p-7">
-        {title} Council
+        {headingTitle} Council
       </h2>
 
     </div>
@@ -116,7 +117,7 @@ const { title, desc, imgUrl }: Props = Astro.props;
       <h2
         class="title text-white text-center lg:text-left font-bold text-4xl pt-3 lg:px-[4rem] lg:pt-[2rem] lg:text-5xl lg:font-bold"
       >
-        {title} Council
+        {headingTitle} Council
       </h2>
     </div>
     <div

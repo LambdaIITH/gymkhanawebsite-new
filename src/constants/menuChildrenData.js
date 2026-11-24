@@ -2,7 +2,7 @@ export const councilChildren = [
   { name: 'General Council', href: '/councils/general' },
   { name: 'Cultural Council', href: '/councils/cultural' },
   { name: 'Media Council', href: '/councils/media' },
-  { name: 'SciTech Council', href: '/councils/scitech' },
+  { name: 'Technical Affairs Council', href: '/councils/scitech' },
   { name: 'Sports Council', href: '/councils/sports' },
   { name: 'Mess Council', href: '/councils/mess' },
 ];
