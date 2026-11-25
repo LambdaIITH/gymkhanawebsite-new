@@ -334,7 +334,7 @@ function Scitech() {
           <div className="lg:col-span-4 col-span-6 grid grid-cols-6 gap-6 lg:gap-[2rem] items-center relative">
             <div className="lg:col-span-4 lg:text-[18px] col-span-full lg:row-span-full m-8">
               <p className="mt-8 justify-self-start">{desc}</p>
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-1 xl:grid-cols-2 gap-2">
                 {coords[club]?.map((coord) => {
                   return (
                     <TCard
