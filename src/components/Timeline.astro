@@ -3532,6 +3532,11 @@ import Slider from "./slider.astro";
             transition: opacity 0.2s;
             width: 50%;
         }
+        @media (max-width: 63.99rem) {
+            .js .cd-h-timeline {
+                width: 100%;
+            }
+        }
         .js .cd-h-timeline--loaded {
             opacity: 1;
         }
@@ -3798,9 +3803,15 @@ import Slider from "./slider.astro";
             font-family: "Playfair Display", serif;
             /* font-family: var(--font-secondary); */
             font-weight: 700;
-            font-size: 2.48832em;
+            /* just smaller than the "Upcoming Events" heading (text-4xl md:text-5xl) */
+            font-size: 1.875rem;
 
             /* font-size: var(--text-xxxl); */
+        }
+        @media (min-width: 48rem) {
+            .js .cd-h-timeline__event-title {
+                font-size: 2.5rem;
+            }
         }
         .js .cd-h-timeline__event-date {
             display: block;

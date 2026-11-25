@@ -172,12 +172,12 @@ function MobileNavbar({ blackOn, disableAnimation }) {
       {active && (
         <div
           ref={mobileMenuRef}
-          className="mobileMenu fixed z-40 w-full h-full "
+          className="mobileMenu fixed z-40 w-full h-full text-white"
         >
           <div className="fixed right-5 top-5 text-lg">
             <button onClick={deActivateMobileMenu}>Close</button>
           </div>
-          <ul className="bg-white text-center pb-6 h-full flex-grow flex flex-col justify-center items-center">
+          <ul className="bg-black text-center pb-6 h-full flex-grow flex flex-col justify-center items-center">
             {updatedLinks.map((el) => (
               <li key={el.parent} className="pt-3 menu-items">
                 <a href={el.href}>
