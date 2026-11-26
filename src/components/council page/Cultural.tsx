@@ -1,7 +1,4 @@
 import { useState, useEffect } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
-import "swiper/css";
 import TCard from "./teamCard";
 
 interface club {
@@ -100,95 +97,6 @@ const coords: Record<string, { name: string; email: string; mobile?: string; pos
   ],
 };
 
-function Card({ title, desc, imgUrl }) {
-  return (
-    <div className="text-black shadow-black drop-shadow-lg bg-white  rounded-2xl flex flex-col justify-center items-center p-[2rem] pt-[1rem] mt-3 max-w-5xl ">
-      <div className="self-start font-semibold">
-        <h2 className="text-4xl">{title}</h2>
-      </div>
-      <div className="h-[15rem] w-[15rem] mt-4 rounded-2xl flex justify-center items-center">
-        <img src={imgUrl} alt={title} />
-      </div>
-      <div className="mt-8">
-        <p>{desc}</p>
-      </div>
-    </div>
-  );
-}
-
-function CulturalMobile() {
-  return (
-    <div className="lg:hidden">
-      <Swiper
-        loop={true}
-        autoHeight={true}
-        slidesPerView={"auto"}
-        centeredSlides={true}
-        spaceBetween={20}
-        navigation={true}
-        className="[&>div]:w-[80%] !py-3"
-      >
-        <SwiperSlide className="shadow-md">
-          <Card
-            imgUrl={clubLogos["infocus"]}
-            title={"Infocus"}
-            desc={clubs[0].desc}
-          />
-        </SwiperSlide>
-        <SwiperSlide className="">
-          <Card
-            imgUrl={clubLogos["btl"]}
-            title={"Behind The Lens"}
-            desc={clubs[1].desc}
-          />
-        </SwiperSlide>
-        <SwiperSlide className="">
-          <Card
-            imgUrl={clubLogos["vibes"]}
-            title={"Vibes"}
-            desc={clubs[2].desc}
-          />
-        </SwiperSlide>
-        <SwiperSlide className="">
-          <Card
-            imgUrl={clubLogos["shuffle"]}
-            title={"Shuffle"}
-            desc={clubs[3].desc}
-          />
-        </SwiperSlide>
-        <SwiperSlide className="">
-          <Card
-            imgUrl={clubLogos["gesture"]}
-            title={"Gesture"}
-            desc={clubs[4].desc}
-          />
-        </SwiperSlide>
-        <SwiperSlide className="">
-          <Card
-            imgUrl={clubLogos["rang"]}
-            title={"Rang de Manch"}
-            desc={clubs[5].desc}
-          />
-        </SwiperSlide>
-        <SwiperSlide className="">
-          <Card
-            imgUrl={clubLogos["otaku"]}
-            title={"Otaku"}
-            desc={clubs[6].desc}
-          />
-        </SwiperSlide>
-        <SwiperSlide className="">
-          <Card
-            imgUrl={clubLogos["fashion"]}
-            title={"Silhouettes"}
-            desc={clubs[7].desc}
-          />
-        </SwiperSlide>
-      </Swiper>
-    </div>
-  );
-}
-
 function Cultural() {
   const [club, setClub] = useState("infocus");
   const [desc, setDesc] = useState(clubs[0].desc);
@@ -226,9 +134,9 @@ function Cultural() {
       <h2 className="lg:text-2xl text-4xl font-bold text-center lg:text-left mt-[2rem] mb-[1rem]">
         Cultural Clubs
       </h2>
-      <div className="lg:grid lg:grid-cols-5 pt-4 hidden">
+      <div className="grid grid-cols-1 lg:grid-cols-5 pt-4">
         <ul
-          className={`lg:col-span-1 hidden text-2xl lg:flex lg:flex-col gap-3 [&>li]:cursor-pointer bg-[#2F2F2F] p-8 flex-col justify-center items-start rounded-xl`}
+          className={`lg:col-span-1 flex flex-row lg:flex-col overflow-x-auto lg:overflow-visible text-base lg:text-2xl gap-2 lg:gap-3 [&>li]:cursor-pointer [&>li]:shrink-0 [&>li]:whitespace-nowrap bg-[#2F2F2F] p-3 lg:p-8 justify-start lg:justify-center items-center lg:items-start rounded-xl`}
         >
           <li
             className={`px-4 py-2 rounded-md ${club === "infocus" ? "bg-[#B74224]" : "text-opacity-40"
@@ -304,10 +212,10 @@ function Cultural() {
           </li>
         </ul>
         <div
-          className={`lg:col-span-4 col-span-6 grid grid-cols-6 gap-6 lg:gap-[2rem] items-center relative z-0`}
+          className={`lg:col-span-4 col-span-6 grid grid-cols-6 gap-2 lg:gap-[2rem] items-center relative z-0`}
         >
-          <div className="lg:col-span-4 lg:text-[18px] col-span-full lg:row-span-full m-8">
-            <p className="mt-8 justify-self-start">{desc}</p>
+          <div className="lg:col-span-4 lg:text-[18px] col-span-full lg:row-span-full m-2 lg:m-8">
+            <p className="mt-4 lg:mt-8 justify-self-start">{desc}</p>
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-2">
               {coords[club]?.map((coord, index) => {
                 return (
@@ -323,16 +231,15 @@ function Cultural() {
               })}
             </div>
           </div>
-          <div className="lg:col-span-2 pointer-events-none h-full col-span-full lg:row-span-full relative flex justify-center items-center">
+          <div className="order-first lg:order-none pt-6 lg:pt-0 lg:col-span-2 pointer-events-none h-full col-span-full lg:row-span-full relative flex justify-center items-center">
             <img
-              className="w-full object-contain"
+              className="w-full max-h-48 lg:max-h-none object-contain"
               src={clubLogos[club]}
               alt=""
             />
           </div>
         </div>
       </div>
-      <CulturalMobile />
     </div>
   );
 }

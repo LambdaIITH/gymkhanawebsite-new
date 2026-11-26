@@ -196,12 +196,12 @@ function Scitech() {
             </address>
           </div>
         </div>
-        <h2 className="hidden lg:block lg:text-4xl text-4xl font-bold text-center lg:text-left mt-[2rem] mb-[1rem]">
+        <h2 className="lg:text-4xl text-3xl font-bold text-center lg:text-left mt-[2rem] mb-[1rem]">
           Clubs
         </h2>
-        <div className="lg:grid lg:grid-cols-5 pt-4 hidden z-0 relative">
+        <div className="grid grid-cols-1 lg:grid-cols-5 pt-4 z-0 relative">
           <ul
-            className={`lg:col-span-1 hidden text-2xl lg:flex lg:flex-col gap-3 [&>li]:cursor-pointer bg-[#2F2F2F] p-8 flex-col justify-center items-start rounded-xl`}
+            className={`lg:col-span-1 flex flex-row lg:flex-col overflow-x-auto lg:overflow-visible text-base lg:text-2xl gap-2 lg:gap-3 [&>li]:cursor-pointer [&>li]:shrink-0 [&>li]:whitespace-nowrap bg-[#2F2F2F] p-3 lg:p-8 justify-start lg:justify-center items-center lg:items-start rounded-xl`}
           >
             <li
               className={`px-4 py-2 rounded-md ${club === "aero" ? "bg-[#B74224]" : "text-opacity-40"
@@ -331,9 +331,9 @@ function Scitech() {
               Alpha
             </li>
           </ul>
-          <div className="lg:col-span-4 col-span-6 grid grid-cols-6 gap-6 lg:gap-[2rem] items-center relative">
-            <div className="lg:col-span-4 lg:text-[18px] col-span-full lg:row-span-full m-8">
-              <p className="mt-8 justify-self-start">{desc}</p>
+          <div className="lg:col-span-4 col-span-6 grid grid-cols-6 gap-2 lg:gap-[2rem] items-center relative">
+            <div className="lg:col-span-4 lg:text-[18px] col-span-full lg:row-span-full m-2 lg:m-8">
+              <p className="mt-4 lg:mt-8 justify-self-start">{desc}</p>
               <div className="grid grid-cols-1 xl:grid-cols-2 gap-2">
                 {coords[club]?.map((coord) => {
                   return (
@@ -349,9 +349,9 @@ function Scitech() {
                 })}
               </div>
             </div>
-            <div className="lg:col-span-2 pointer-events-none h-full col-span-full lg:row-span-full relative flex justify-center items-center">
+            <div className="order-first lg:order-none pt-6 lg:pt-0 lg:col-span-2 pointer-events-none h-full col-span-full lg:row-span-full relative flex justify-center items-center">
               <img
-                className="w-full object-contain"
+                className="w-full max-h-48 lg:max-h-none object-contain"
                 src={clubLogos[club]}
                 alt=""
               />

@@ -10,18 +10,18 @@ export default interface Props{
 }
 const {name,position, email, linkedin,mobile, imgUrl, initial=false} = Astro.props;
 ---
-<div class="group relative flex w-[18rem] flex-col items-center gap-4 overflow-hidden rounded-2xl bg-white p-6 text-center shadow-lg transition-all hover:scale-105 hover:shadow-xl">
-    <div class="relative h-40 w-40 overflow-hidden rounded-full border-4 border-[#eeeeee]">
+<div class="group relative flex w-[18rem] flex-col items-center gap-4 overflow-hidden rounded-2xl bg-gray-800 p-6 text-center text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl">
+    <div class="relative h-40 w-40 overflow-hidden rounded-full">
         <img class="h-full w-full object-cover" src={initial===true ? imgUrl : ''} alt={position} width={160} height={160}/>
     </div>
     
     <div class="flex flex-col gap-1">
-        <h3 class="text-xl font-bold text-gray-900">{name}</h3>
-        <p class="text-sm font-medium text-gray-500">{position}</p>
-        {mobile && <p class="text-sm font-semibold text-p">(+91) {mobile}</p>}
+        <h3 class="text-xl font-bold text-white">{name}</h3>
+        <p class="text-sm font-medium text-white/80">{position}</p>
+        {mobile && <p class="text-sm font-semibold text-white">(+91) {mobile}</p>}
     </div>
 
-    <a href={email} target="_blank" rel="noopener noreferrer" class="mt-2 flex items-center gap-2 rounded-full bg-p px-6 py-2 text-sm font-semibold text-gray-900 transition-colors hover:bg-gray-900 hover:text-white group-hover:bg-gray-900 group-hover:text-white">
+    <a href={email} target="_blank" rel="noopener noreferrer" class="mt-2 flex items-center gap-2 rounded-full bg-[#B74224] px-6 py-2 text-sm font-semibold text-white shadow-md transition-colors hover:bg-[#9a3519]">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4">
             <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
             <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
